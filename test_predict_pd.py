@@ -118,8 +118,8 @@ with tf.Session() as sess:
     # initialization
     sess.run(tf.global_variables_initializer())
     # Loading trained models
-    #saver = tf.train.Saver()   
-    #saver.restore(sess, tf.train.latest_checkpoint('./captcha/models/'))  
+    saver = tf.train.Saver()   
+    saver.restore(sess, tf.train.latest_checkpoint('./captcha/models/'))  
 
     # Create a coordinator, manage threads
     coord = tf.train.Coordinator()
